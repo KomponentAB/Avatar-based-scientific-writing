@@ -13,7 +13,7 @@
 
 👨🏻‍🔧 If you have any questions, feel free to ask in the [WorkAdventure office](https://play.staging.workadventu.re/@/tcm/workadventure/wa-village).
 
-## 🚀 Upload your map!
+## 🚀 Upload your map.
 
 In the `.env` file, you can set your upload strategy to `GH_PAGES` (default) or `MAP_STORAGE`. Simply comment out the option you don't want to use.
 

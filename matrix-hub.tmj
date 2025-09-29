@@ -711,8 +711,8 @@
                  "type":"area",
                  "visible":true,
                  "width":64.7386363636364,
-                 "x":712.868752322977,
-                 "y":598.142182329828
+                 "x":720.868752322977,
+                 "y":592.142182329828
                 }, 
                 {
                  "height":32,
@@ -827,7 +827,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"Modul 4 zur KI-Kompetenzen ist aus Sicherheitsgr\u00fcnden gesperrt. Nur Mumbelcore kann dir Zugang gew\u00e4hren und daf\u00fcr musst du dich hier erstmal beweisen."
+                         "value":"Modul 4 zur KI-Kompetenzen ist aus Sicherheitsgr\u00fcnden gesperrt. Nur Mumbelcore kann dir Zugang gew\u00e4hren und daf\u00fcr musst du dich in de4n beiden anderen Modulen beweisen erst mal beweisen."
                         }, 
                         {
                          "name":"isNpc",
@@ -892,8 +892,8 @@
                  "type":"area",
                  "visible":true,
                  "width":1421.42472108394,
-                 "x":37.2180703449843,
-                 "y":235.246881332891
+                 "x":60.2180703449843,
+                 "y":211.246881332891
                 }, 
                 {
                  "height":64.5455,

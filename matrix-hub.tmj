@@ -750,28 +750,6 @@
                 }, 
                 {
                  "height":32,
-                 "id":4,
-                 "name":"exit",
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":".\/matrix-hub.tmj#labToMatrix"
-                        }, 
-                        {
-                         "name":"\u2139\ufe0f",
-                         "type":"string",
-                         "value":"this one is a exit defined by an area-Object"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":96.5,
-                 "x":1099.26210729273,
-                 "y":38.1404105704888
-                }, 
-                {
-                 "height":32,
                  "id":5,
                  "name":"exit",
                  "properties":[

@@ -3179,7 +3179,7 @@
                  "y":919
                 }, 
                 {
-                 "height":99,
+                 "height":114.5,
                  "id":39,
                  "name":"4KI",
                  "properties":[
@@ -3211,9 +3211,127 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":94.5,
-                 "x":897,
+                 "width":102.5,
+                 "x":889,
                  "y":462.5
+                }, 
+                {
+                 "height":26.8333,
+                 "id":40,
+                 "name":"progger_2",
+                 "properties":[
+                        {
+                         "name":"chatText",
+                         "type":"string",
+                         "value":"##### Vorbereitung auf das Treffen \ud83e\uddd1\u200d\ud83d\udd2c\n\n**\u201eSch\u00f6n dich zu sehen {NameOfPlayer}.**  \n\nProfessorin Sake erwartet dich schon.  \n\n> Sie kann manchmal etwas einsch\u00fcchternd wirken, aber:  \n\ud83d\udc49 **Lass dich davon nicht abschrecken.**  \n\n**Viel Gl\u00fcck! \ud83c\udf40**"
+                        }, 
+                        {
+                         "name":"isNpc",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"npcName",
+                         "type":"string",
+                         "value":"Marry Jane Progger"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":70.8333,
+                 "x":1021.08335,
+                 "y":483.33335
+                }, 
+                {
+                 "height":26.1666,
+                 "id":41,
+                 "name":"grid_2",
+                 "properties":[
+                        {
+                         "name":"chatText",
+                         "type":"string",
+                         "value":"##### Vorbereitung auf das Treffen \ud83e\uddd1\u200d\ud83d\udd2c\n\n**\u201eSch\u00f6n dich zu sehen {NameOfPlayer}.**  \n\nProfessorin Sake erwartet dich schon.  \n\n> Sie kann manchmal etwas einsch\u00fcchternd wirken, aber:  \n\ud83d\udc49 **Lass dich davon nicht abschrecken.**  \n\n**Viel Gl\u00fcck! \ud83c\udf40**"
+                        }, 
+                        {
+                         "name":"isNpc",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"npcName",
+                         "type":"string",
+                         "value":"Herr Grid "
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":49.5,
+                 "x":1037.25,
+                 "y":451.1667
+                }, 
+                {
+                 "height":21.3333,
+                 "id":42,
+                 "name":"mcdongle_1",
+                 "properties":[
+                        {
+                         "name":"chatText",
+                         "type":"string",
+                         "value":"##### Herzlich Willkommen {NameOfPlayer}! \n\n**Du bist neu hier, oder?** Lass mich dir helfen!  \n\nUnsere Leitung, **Professor Mumbelcore**, begr\u00fc\u00dft alle Neuen am **oberen Ende dieser Halle**.  \n\n\ud83d\udc49**Du solltest umgehend mit ihm sprechen.** "
+                        }, 
+                        {
+                         "name":"isNpc",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"npcName",
+                         "type":"string",
+                         "value":"Prof. McDongle"
+                        }, 
+                        {
+                         "name":"triggerQuest",
+                         "type":"string",
+                         "value":"quest2"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":98.5,
+                 "x":1007.75,
+                 "y":520.33335
+                }, 
+                {
+                 "height":25.833,
+                 "id":43,
+                 "name":"sake_1",
+                 "properties":[
+                        {
+                         "name":"chatText",
+                         "type":"string",
+                         "value":"##### Vorbereitung auf das Treffen \ud83e\uddd1\u200d\ud83d\udd2c\n\n**\u201eSch\u00f6n dich zu sehen {NameOfPlayer}.**  \n\nProfessorin Sake erwartet dich schon.  \n\n> Sie kann manchmal etwas einsch\u00fcchternd wirken, aber:  \n\ud83d\udc49 **Lass dich davon nicht abschrecken.**  \n\n**Viel Gl\u00fcck! \ud83c\udf40**"
+                        }, 
+                        {
+                         "name":"isNpc",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"npcName",
+                         "type":"string",
+                         "value":"Prof. Sake"
+                        }, 
+                        {
+                         "name":"triggerQuest",
+                         "type":"string",
+                         "value":"quest4"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":88.5,
+                 "x":1024.75,
+                 "y":549.8335
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4158,7 +4276,7 @@
          "y":0
         }],
  "nextlayerid":64,
- "nextobjectid":40,
+ "nextobjectid":44,
  "orientation":"orthogonal",
  "properties":[
         {

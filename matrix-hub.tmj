@@ -827,7 +827,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"Modul 4 zur KI-Kompetenzen ist aus Sicherheitsgr\u00fcnden gesperrt. Nur Mumbelcore kann dir Zugang gew\u00e4hren und daf\u00fcr musst du dich in de4n beiden anderen Modulen beweisen erst mal beweisen."
+                         "value":"##### \ud83d\udd11 Zugang zum KI-Modul\n\nModul 4 zur KI-Kompetenzen ist aus Sicherheitsgr\u00fcnden gesperrt.\ud83d\udee1\ufe0f\n\n**Nur Mumbelcore** kann dir Zugang gew\u00e4hren und daf\u00fcr musst du dich erst mal in den beiden anderen Modulen beweisen."
                         }, 
                         {
                          "name":"isNpc",
@@ -896,7 +896,7 @@
                  "y":211.246881332891
                 }, 
                 {
-                 "height":64.5455,
+                 "height":31.8788333333334,
                  "id":24,
                  "name":"m2back",
                  "properties":[
@@ -908,12 +908,12 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":64.7386,
-                 "x":432.6307,
-                 "y":402.72725
+                 "width":30.7386,
+                 "x":448.297366666667,
+                 "y":415.72725
                 }, 
                 {
-                 "height":64.5455,
+                 "height":33.8788333333334,
                  "id":25,
                  "name":"m3back",
                  "properties":[
@@ -925,9 +925,9 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":64.7386,
-                 "x":721.6307,
-                 "y":397.72725
+                 "width":33.7386,
+                 "x":734.6307,
+                 "y":414.060583333333
                 }],
          "opacity":1,
          "type":"objectgroup",

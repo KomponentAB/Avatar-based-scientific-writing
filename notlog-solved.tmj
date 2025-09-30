@@ -3223,7 +3223,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"\n**Gut gemacht {NameOfPlayer}.**  \n\nDu hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n"
+                         "value":"**{NameOfPlayer}, wie hast du das nur geschaftr.**\n\nDas war wirklich spitze von dir.\n\nEndlich k\u00f6nnen wir das **Kondensatorium** wieder nutzen.\n**Zirze** wird sich auch v\u00f6llig ausser sich sein. \n\nIch habe geh\u00f6rt, **Mumblecore** hat dir erlaubt das KI-Modul zu testen. \nIch bin richtig **neidisch**, du bist, soweit ich wei\u00df, der erste Mensch, der es sehen darf. \n"
                         }, 
                         {
                          "name":"isNpc",
@@ -3250,7 +3250,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"**\u201eWow {NameOfPlayer} du hast es geschafft.** \n\nDu hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n \nDann kann ich endlich wieder im Kondensatorium aufr\u00e4umen.\n\n"
+                         "value":"**\u201eWow {NameOfPlayer}, du hast es geschafft.** \n\nDu hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n \nDann kann ich endlich wieder im Kondensatorium aufr\u00e4umen.\n\n"
                         }, 
                         {
                          "name":"isNpc",
@@ -3277,7 +3277,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"\n**Gut gemacht {NameOfPlayer}.**  \n\nDu hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n\n\nVielen Dank f\u00fcr deine Hilfe!  \n\n"
+                         "value":"**Gut gemacht {NameOfPlayer}.**  \n\nDu hast es **Lord Modrevolt** richtig gezeigt und ihn aus unserem System verbannt. Das werde ich dir nie vergessen.\n\n\nVielen Dank f\u00fcr deine Hilfe!  \n\n"
                         }, 
                         {
                          "name":"isNpc",
@@ -3309,7 +3309,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"**Nicht schlcht Potte..., \u00e4hm {NameOfPlayer}.**  \n\nIch hatte nicht erwartet dich nochmal wieder zu sehen.  \n\n**Jetzt zeig mal im KI-Modul ob du nur Gl\u00fcck oder auch Verstand hast!**"
+                         "value":"**Nicht schlcht Potte..., \u00e4hm {NameOfPlayer}.**  \n\nIch hatte nicht erwartet dich nochmal wieder zu sehen.  \n\n**Jetzt zeig mal im KI-Modul ob das nur Gl\u00fcck war oder du auch Verstand hast!**"
                         }, 
                         {
                          "name":"isNpc",

@@ -3309,7 +3309,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"**Nicht schlcht Pott, \u00e4hm {NameOfPlayer}.**  \n\nIch hatte nicht erwartet dich nochmal wieder zu sehen.  \n\n**Jetzt zeig mal im KI-Modul ob du nur Gl\u00fcck oder auch Verstand hast!**"
+                         "value":"**Nicht schlcht Potte..., \u00e4hm {NameOfPlayer}.**  \n\nIch hatte nicht erwartet dich nochmal wieder zu sehen.  \n\n**Jetzt zeig mal im KI-Modul ob du nur Gl\u00fcck oder auch Verstand hast!**"
                         }, 
                         {
                          "name":"isNpc",

@@ -3045,7 +3045,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"\ud83c\udf89 **Willkommen zur\u00fcck {NameOfPlayer}!** \ud83c\udf89 \n\n \n\nDu hast **Gro\u00dfes getan** f\u00fcr unsere Universit\u00e4t. Du hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n\n \n\nUnsere Universit\u00e4t **Notlog** ist endlich wieder funktionst\u00fcchtig und wir k\u00f6nnen weiter **digitale Lehr- und Lernmaterialien** im **Kondensatorium** produzieren. \ud83d\udcbb\ud83d\udcda \n\n \n\nWir sind dir zutiefst zu Dank verpflichtet. \ud83d\ude4f"
+                         "value":"\ud83c\udf89 **Willkommen zur\u00fcck {NameOfPlayer}!** \ud83c\udf89 \n\n \nDu hast **Gro\u00dfes getan** f\u00fcr unsere Universit\u00e4t. Du hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n\n\nUnsere Universit\u00e4t **Notlog** ist endlich wieder funktionst\u00fcchtig und wir k\u00f6nnen weiter **digitale Lehr- und Lernmaterialien** im **Kondensatorium** produzieren. \ud83d\udcbb\ud83d\udcda \n\n \nWir sind dir zutiefst zu Dank verpflichtet. \ud83d\ude4f\n\n\nAls Zeichen meines Vertrauens will ich f\u00fcr dir unser neues KI-Modul zur Verf\u00fcgung stellen. Du findest es zu deiner Rechten auf dem Podest. "
                         }, 
                         {
                          "name":"isNpc",
@@ -3223,7 +3223,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"##### Vorbereitung auf das Treffen \ud83e\uddd1\u200d\ud83d\udd2c\n\n**\u201eSch\u00f6n dich zu sehen {NameOfPlayer}.**  \n\nProfessorin Sake erwartet dich schon.  \n\n> Sie kann manchmal etwas einsch\u00fcchternd wirken, aber:  \n\ud83d\udc49 **Lass dich davon nicht abschrecken.**  \n\n**Viel Gl\u00fcck! \ud83c\udf40**"
+                         "value":"\n**Gut gemacht {NameOfPlayer}.**  \n\nDu hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n"
                         }, 
                         {
                          "name":"isNpc",
@@ -3250,7 +3250,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"##### Vorbereitung auf das Treffen \ud83e\uddd1\u200d\ud83d\udd2c\n\n**\u201eSch\u00f6n dich zu sehen {NameOfPlayer}.**  \n\nProfessorin Sake erwartet dich schon.  \n\n> Sie kann manchmal etwas einsch\u00fcchternd wirken, aber:  \n\ud83d\udc49 **Lass dich davon nicht abschrecken.**  \n\n**Viel Gl\u00fcck! \ud83c\udf40**"
+                         "value":"**\u201eWow {NameOfPlayer} du hast es geschafft.** \n\nDu hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n \nDann kann ich endlich wieder im Kondensatorium aufr\u00e4umen.\n\n"
                         }, 
                         {
                          "name":"isNpc",
@@ -3277,7 +3277,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"##### Herzlich Willkommen {NameOfPlayer}! \n\n**Du bist neu hier, oder?** Lass mich dir helfen!  \n\nUnsere Leitung, **Professor Mumbelcore**, begr\u00fc\u00dft alle Neuen am **oberen Ende dieser Halle**.  \n\n\ud83d\udc49**Du solltest umgehend mit ihm sprechen.** "
+                         "value":"\n**Gut gemacht {NameOfPlayer}.**  \n\nDu hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n\n\nVielen Dank f\u00fcr deine Hilfe!  \n\n"
                         }, 
                         {
                          "name":"isNpc",
@@ -3309,7 +3309,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"##### Vorbereitung auf das Treffen \ud83e\uddd1\u200d\ud83d\udd2c\n\n**\u201eSch\u00f6n dich zu sehen {NameOfPlayer}.**  \n\nProfessorin Sake erwartet dich schon.  \n\n> Sie kann manchmal etwas einsch\u00fcchternd wirken, aber:  \n\ud83d\udc49 **Lass dich davon nicht abschrecken.**  \n\n**Viel Gl\u00fcck! \ud83c\udf40**"
+                         "value":"**Nicht schlcht Pott, \u00e4hm {NameOfPlayer}.**  \n\nIch hatte nicht erwartet dich nochmal wieder zu sehen.  \n\n**Jetzt zeig mal im KI-Modul ob du nur Gl\u00fcck oder auch Verstand hast!**"
                         }, 
                         {
                          "name":"isNpc",

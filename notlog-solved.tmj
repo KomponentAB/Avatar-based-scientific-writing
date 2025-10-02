@@ -3223,7 +3223,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"**{NameOfPlayer}, wie hast du das nur geschaftr.**\n\nDas war wirklich spitze von dir.\n\nEndlich k\u00f6nnen wir das **Kondensatorium** wieder nutzen.\n**Zirze** wird sich auch v\u00f6llig ausser sich sein. \n\nIch habe geh\u00f6rt, **Mumblecore** hat dir erlaubt das KI-Modul zu testen. \nIch bin richtig **neidisch**, du bist, soweit ich wei\u00df, der erste Mensch, der es sehen darf. \n"
+                         "value":"**{NameOfPlayer}, wie hast du das nur geschaftr.**\n\nDas war wirklich spitze von dir.\u2705\n\nEndlich k\u00f6nnen wir das **Kondensatorium** wieder nutzen.\n**Zirze** wird sich auch v\u00f6llig ausser sich sein. \n\nIch habe geh\u00f6rt, **Mumblecore** hat dir erlaubt das KI-Modul zu testen. \nIch bin richtig **neidisch**, du bist, soweit ich wei\u00df, der erste Mensch, der es sehen darf. \n"
                         }, 
                         {
                          "name":"isNpc",
@@ -3309,7 +3309,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"**Nicht schlcht Potte..., \u00e4hm {NameOfPlayer}.**  \n\nIch hatte nicht erwartet dich nochmal wieder zu sehen.  \n\n**Jetzt zeig mal im KI-Modul ob das nur Gl\u00fcck war oder du auch Verstand hast!**"
+                         "value":"**Nicht schlcht Potte..., \u00e4hm {NameOfPlayer}.**  \n\nIch hatte nicht erwartet dich nochmal wieder zu sehen.  \n\n**Jetzt zeig mal im KI-Modul ob das nur Gl\u00fcck\ud83c\udf40 war oder du auch Verstand\ud83e\udde0 hast!**"
                         }, 
                         {
                          "name":"isNpc",

@@ -110,7 +110,7 @@ WA.onInit().then(async () => {
                 next: (newValue) => {
                     if (newValue === "solved") {
                         levelUp("modul_4", 10);
-                        console.log(`Variable "ThemenfindungGliederung" solved. Level up, +10XP`);
+                        console.log(`Variable "4KI" solved. Level up, +10XP`);
                         WA.player.state.currentQuest = "quest28";
                         setTimeout(() => {
                             try {

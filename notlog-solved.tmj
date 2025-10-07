@@ -2977,67 +2977,6 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "height":96,
-                 "id":1,
-                 "name":"upstairs_fromLab",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":32,
-                 "x":1321,
-                 "y":985
-                }, 
-                {
-                 "height":99.5,
-                 "id":4,
-                 "name":"downstairs_toLab",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":30.875,
-                 "x":1321,
-                 "y":825
-                }, 
-                {
-                 "height":32,
-                 "id":6,
-                 "name":"labportal",
-                 "properties":[
-                        {
-                         "name":"start",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":96.375,
-                 "x":1856.89583333333,
-                 "y":952.91666666667
-                }, 
-                {
-                 "height":32,
-                 "id":7,
-                 "name":"exit",
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":".\/matrix-hub.tmj#labToMatrix"
-                        }, 
-                        {
-                         "name":"\u2139\ufe0f",
-                         "type":"string",
-                         "value":"this one is a exit defined by an area-Object"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":96.5,
-                 "x":1526.75,
-                 "y":820
-                }, 
-                {
                  "height":146.333333333333,
                  "id":9,
                  "name":"mumblecore_1",
@@ -3045,7 +2984,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"\ud83c\udf89 **Willkommen zur\u00fcck {NameOfPlayer}!** \ud83c\udf89 \n\n \nDu hast **Gro\u00dfes getan** f\u00fcr unsere Universit\u00e4t. Du hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n\n\nUnsere Universit\u00e4t **Notlog** ist endlich wieder funktionst\u00fcchtig und wir k\u00f6nnen weiter **digitale Lehr- und Lernmaterialien** im **Kondensatorium** produzieren. \ud83d\udcbb\ud83d\udcda \n\n \nWir sind dir zutiefst zu Dank verpflichtet. \ud83d\ude4f\n\n\nAls Zeichen meines Vertrauens will ich f\u00fcr dir unser neues KI-Modul zur Verf\u00fcgung stellen. Du findest es zu deiner Rechten auf dem Podest. "
+                         "value":"\ud83c\udf89 **Willkommen zur\u00fcck {NameOfPlayer}!** \ud83c\udf89 \n\n \nDu hast **Gro\u00dfes getan** f\u00fcr unsere Universit\u00e4t. Du hast den **Virus neutralisiert** und **Lord Modrevolt** ein f\u00fcr alle Mal aus unserem System verbannt. \u2694\ufe0f \n\n\nUnsere Universit\u00e4t **Notlog** ist endlich wieder funktionst\u00fcchtig und wir k\u00f6nnen weiter **digitale Lehr- und Lernmaterialien** im **Kondensatorium** produzieren. \ud83d\udcbb\ud83d\udcda \n\n \nWir sind dir zutiefst zu Dank verpflichtet. \ud83d\ude4f\n\n\nAls Zeichen meines Vertrauens will ich f\u00fcr dir unser neues KI-Modul zur Verf\u00fcgung stellen. Du findest es zu deiner Rechten auf dem Podest.\ud83c\udf87 "
                         }, 
                         {
                          "name":"isNpc",
@@ -3068,115 +3007,6 @@
                  "width":306.833333333333,
                  "x":547.666666666667,
                  "y":449.666666666667
-                }, 
-                {
-                 "height":0,
-                 "id":29,
-                 "name":"bookshelf",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"closeLayer",
-                         "type":"string",
-                         "value":"doorClose"
-                        }, 
-                        {
-                         "name":"closeSound",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
-                         "name":"default",
-                         "type":"bool",
-                         "value":false
-                        }, 
-                        {
-                         "name":"door",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openLayer",
-                         "type":"string",
-                         "value":"doorOpen"
-                        }, 
-                        {
-                         "name":"openSound",
-                         "type":"string",
-                         "value":""
-                        }, 
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"soundRadius",
-                         "type":"int",
-                         "value":0
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":1841,
-                 "y":1241
-                }, 
-                {
-                 "height":0,
-                 "id":30,
-                 "name":"hideShow_matrix",
-                 "point":true,
-                 "properties":[
-                        {
-                         "name":"default",
-                         "type":"string",
-                         "value":"1"
-                        }, 
-                        {
-                         "name":"persist",
-                         "type":"bool",
-                         "value":false
-                        }],
-                 "rotation":0,
-                 "type":"variable",
-                 "visible":true,
-                 "width":0,
-                 "x":1969,
-                 "y":977
-                }, 
-                {
-                 "height":296,
-                 "id":31,
-                 "name":"leaveNotlog",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":96,
-                 "x":1857,
-                 "y":985
-                }, 
-                {
-                 "height":32,
-                 "id":34,
-                 "name":"exit",
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":".\/matrix-hub.tmj"
-                        }, 
-                        {
-                         "name":"\u2139\ufe0f",
-                         "type":"string",
-                         "value":"this one is a exit defined by an area-Object"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":96.5,
-                 "x":1855.75,
-                 "y":919
                 }, 
                 {
                  "height":114.5,
@@ -3332,6 +3162,116 @@
                  "width":88.5,
                  "x":1024.75,
                  "y":549.8335
+                }, 
+                {
+                 "height":1020.036,
+                 "id":44,
+                 "name":"wood_2",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"wood"
+                        }, 
+                        {
+                         "name":"stepSound",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":351.881333333333,
+                 "x":301.726,
+                 "y":558.648666666667
+                }, 
+                {
+                 "height":869.222,
+                 "id":45,
+                 "name":"path_2",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"path"
+                        }, 
+                        {
+                         "name":"stepSound",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":99.5215,
+                 "x":655.572583333333,
+                 "y":542.722333333333
+                }, 
+                {
+                 "height":107.888666666667,
+                 "id":46,
+                 "name":"path_1",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"path"
+                        }, 
+                        {
+                         "name":"stepSound",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":296.854833333333,
+                 "x":759.572583333333,
+                 "y":1188.05566666667
+                }, 
+                {
+                 "height":626.706666666667,
+                 "id":48,
+                 "name":"wood_3",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"wood"
+                        }, 
+                        {
+                         "name":"stepSound",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":337.214333333333,
+                 "x":754.726166666667,
+                 "y":553.98
+                }, 
+                {
+                 "height":249.446,
+                 "id":49,
+                 "name":"wood_4",
+                 "properties":[
+                        {
+                         "name":"material",
+                         "type":"string",
+                         "value":"wood"
+                        }, 
+                        {
+                         "name":"stepSound",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":164.447,
+                 "x":855.109833333333,
+                 "y":368.610333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -4276,7 +4216,7 @@
          "y":0
         }],
  "nextlayerid":64,
- "nextobjectid":44,
+ "nextobjectid":50,
  "orientation":"orthogonal",
  "properties":[
         {

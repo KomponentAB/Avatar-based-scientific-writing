@@ -148,7 +148,7 @@ const quests = [
         questId: 'quest27',
         questDescription: 'Rückkehr in die Notlog. Sprich mit Prof. Mumblecore.',
         requireQuest: 'quest26',
-    }
+    },
     {
         questId: 'quest28',
         questDescription: 'Bearbeite das Lernmaterial auf dem Podest.',

@@ -124,7 +124,7 @@ WA.onInit().then(async () => {
                 message: `[LEERTASTE] drücken um mit dem Terminal zu interagieren.`,
                 callback: () => {
                     WA.chat.sendChatMessage(
-                        "Du kannst jetzt den Sicherheitscode eingeben. Schreibe die richtigen Begriffe in den Chat.",
+                        "Du kannst jetzt die gesammelten Codeschnipsel in den Chat eingeben. Für den Fall, dass du sie dir doch nicht notiert hast, sind sie hier nochmal: **sie/ zu / denken / ist / Wissenschaft / eine / mehr / als / Wissenssammlung / ist /eine / Art**. Nutze diese, um den korrekten Satz zu bilden und gib ihn hier im Chat ein!",
                         "Zirze"
                     );
 

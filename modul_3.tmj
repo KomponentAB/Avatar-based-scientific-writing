@@ -2043,6 +2043,40 @@
                  "width":439.931012145749,
                  "x":111.613441295547,
                  "y":1517.94421052632
+                }, 
+                {
+                 "height":31.2122,
+                 "id":40,
+                 "name":"Bot_Space1",
+                 "properties":[
+                        {
+                         "name":"start",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":34.7386,
+                 "x":400.1307,
+                 "y":2625.3939
+                }, 
+                {
+                 "height":31.2122,
+                 "id":41,
+                 "name":"Bot_Space1",
+                 "properties":[
+                        {
+                         "name":"start",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":34.7386,
+                 "x":357.1307,
+                 "y":2044.8939
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -2253,7 +2287,7 @@
          "y":0
         }],
  "nextlayerid":32,
- "nextobjectid":40,
+ "nextobjectid":42,
  "orientation":"orthogonal",
  "properties":[
         {

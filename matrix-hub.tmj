@@ -928,6 +928,23 @@
                  "width":33.7386,
                  "x":734.6307,
                  "y":414.060583333333
+                }, 
+                {
+                 "height":31.2121666666667,
+                 "id":26,
+                 "name":"Bot_Space1",
+                 "properties":[
+                        {
+                         "name":"start",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":34.7386,
+                 "x":737.6307,
+                 "y":515.060583333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1058,7 +1075,7 @@
          "y":0
         }],
  "nextlayerid":26,
- "nextobjectid":26,
+ "nextobjectid":27,
  "orientation":"orthogonal",
  "properties":[
         {

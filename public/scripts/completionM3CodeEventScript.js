@@ -4,7 +4,7 @@
   // =============================================
   // CONFIG – hier deine Web App URL eintragen
   // =============================================
-  const GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1JF6BCFIV4ZW5mR_a8PYyHt96uJkfY98zQHSEF8duYoo/edit?usp=sharing";
+  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbxstcLUwgiZNr-kwIh7QCyLiCO_V04HPz4-6M9D6aXZME3yDqu1A4Un63ADTxgZDo53/exec";
   // =============================================
 
   const script = document.createElement("script");

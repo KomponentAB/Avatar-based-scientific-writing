@@ -47,18 +47,7 @@
   };
   document.head.appendChild(script);
  
-  /**
-   * Einfache deterministische Hash-Funktion.
-   * Gleiche playerId → immer gleicher Index im CODE_POOL.
-   */
-  function hashPlayerIdToIndex(playerId, listLength) {
-    let hash = 0;
-    for (let i = 0; i < playerId.length; i++) {
-      hash = ((hash << 5) - hash) + playerId.charCodeAt(i);
-      hash |= 0; // 32-bit int
-    }
-    return Math.abs(hash) % listLength;
-  }
+
  
   /**
    * Gibt den Code für einen Spieler zurück.

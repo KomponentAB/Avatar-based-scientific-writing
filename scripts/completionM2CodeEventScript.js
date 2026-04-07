@@ -125,7 +125,7 @@
  
           if (result.alreadyRegistered) {
             // Code bereits vergeben → returnMessage senden
-            WA.chat.sendChatMessage(returnMessage, messageNpc);
+            WA.chat.sendChatMessage(returnMessage + result.code, messageNpc);
           } else {
             // Edge Case: solved aber noch kein Code gespeichert
             WA.chat.sendChatMessage(completionMessage, messageNpc);

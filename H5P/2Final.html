@@ -10,7 +10,7 @@
             const completionMessage = "Gut gemacht! Du kannst jetzt durch das Portal den Raum verlassen."; //Enter the completion message here
             const messageNpc = "Zirze"; //default "Zirze"
             const workbookName = "Abschlussquiz2"; //Enter Workbookname here
-            const returnMessage = "Abschlussquiz Raum 2 gelöst."; //Enter the return message here, its the message players receive on completion and when they return to the chamber
+            const returnMessage = "Das Abschlussquiz von Modul 2 hast du betreist gelöst."; //Enter the return message here, its the message players receive on completion and when they return to the chamber
         </script>
 
 <script src="https://komponentab.github.io/Avatar-based-scientific-writing/scripts/workadventure-iframe-fixed.js"></script>
@@ -23,7 +23,7 @@
             console.log("👎Abschlussquiz2=not solved")
         } else {
             WA.chat.sendChatMessage(
-                "Gut gemacht! Du kannst jetzt durch das Portal den Raum verlassen.",
+                "Gut gemacht! Du kannst jetzt durch das Portal den Raum verlassen, aber denk daran dir deinen Code zu notieren.",
                 "Zirze"
             );
             console.log("👍Abschlussquiz2=solved")

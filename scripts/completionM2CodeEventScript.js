@@ -126,10 +126,11 @@
           if (result.alreadyRegistered) {
             // Code bereits vergeben → returnMessage senden
             WA.chat.sendChatMessage(returnMessage + result.code, messageNpc);
+            WA.chat.sendChatMessage("🔑 Falls du deinen *Moodle-Code* vergessen hast er lautet : " + result.code, messageNpc);
           } else {
             // Edge Case: solved aber noch kein Code gespeichert
             WA.chat.sendChatMessage(completionMessage, messageNpc);
-            WA.chat.sendChatMessage("🔑 Dein Code: " + result.code, messageNpc);
+            WA.chat.sendChatMessage("🔑 Dein *Moodle-Code*, mit dem du deinen Fortschrit im Moodle-Kurs festhalten kannst, lautet: " + result.code, messageNpc);
           }
         }
       } catch (error) {

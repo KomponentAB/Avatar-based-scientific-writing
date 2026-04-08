@@ -352,9 +352,9 @@
           const result = await getCodeForPlayer(waPlayerId);
 
           if (result.code) {
-            WA.chat.sendChatMessage(returnMessage + result.code, messageNpc);
+            WA.chat.sendChatMessage(returnMessage, messageNpc);
             WA.chat.sendChatMessage(
-              "🔑 Falls du deinen *Moodle-Code* vergessen hast, er lautet: " + result.code,
+              "🔑 Falls du deinen **Moodle-Code** vergessen hast, er lautet: " + result.code,
               messageNpc
             );
             if (result.warning) {
@@ -420,13 +420,13 @@
             }
           } else if (result.alreadyRegistered) {
             WA.chat.sendChatMessage(returnMessage, messageNpc);
-            WA.chat.sendChatMessage("🔑 Falls vergessen hast deinen *Moodle-Code* zu notieren, er lautet: " + result.code, messageNpc);
+            WA.chat.sendChatMessage("🔑 Falls vergessen hast deinen **Moodle-Code** zu notieren, er lautet: " + result.code, messageNpc);
             if (result.warning) {
               WA.chat.sendChatMessage(result.warning, messageNpc);
             }
           } else {
             WA.chat.sendChatMessage(completionMessage, messageNpc);
-            WA.chat.sendChatMessage("🔑 Dein *Moodle-Code*, mit dem du deinen Fortschrit im Moodle-Kurs festhalten kannst, lautet: " + result.code, messageNpc);
+            WA.chat.sendChatMessage("🔑 Dein **Moodle-Code**, mit dem du deinen Fortschrit im Moodle-Kurs festhalten kannst, lautet: " + result.code, messageNpc);
             if (result.warning) {
               WA.chat.sendChatMessage(result.warning, messageNpc);
             }

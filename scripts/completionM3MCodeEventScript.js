@@ -308,7 +308,7 @@
           const result = await getCodeForPlayer(waPlayerId);
 
           if (result.code) {
-            WA.chat.sendChatMessage(returnMessage + result.code, messageNpc);
+            WA.chat.sendChatMessage(returnMessage, messageNpc);
             WA.chat.sendChatMessage(
               "🔑 Falls du deinen *Moodle-Code* vergessen hast, er lautet: " + result.code,
               messageNpc
@@ -376,13 +376,13 @@
             }
           } else if (result.alreadyRegistered) {
             WA.chat.sendChatMessage(returnMessage, messageNpc);
-            WA.chat.sendChatMessage("🔑 Falls vergessen hast deinen *Moodle-Code* zu notieren, er lautet: " + result.code, messageNpc);
+            WA.chat.sendChatMessage("🔑 Falls vergessen hast deinen **Moodle-Code** zu notieren, er lautet: " + result.code, messageNpc);
             if (result.warning) {
               WA.chat.sendChatMessage(result.warning, messageNpc);
             }
           } else {
             WA.chat.sendChatMessage(completionMessage, messageNpc);
-            WA.chat.sendChatMessage("🔑 Dein *Moodle-Code*, den du dir unbedingt notieren solltest, lautet: " + result.code, messageNpc);
+            WA.chat.sendChatMessage("🔑 Dein **Moodle-Code**, den du dir unbedingt notieren solltest, lautet: " + result.code, messageNpc);
             if (result.warning) {
               WA.chat.sendChatMessage(result.warning, messageNpc);
             }

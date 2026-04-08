@@ -40,10 +40,10 @@
   ];
 
   // Eindeutige Schlüssel für diesen Raum (müssen in Tiled als Variablen existieren!)
-  const STATE_KEY = "assignedCodesM1";              // Map: { playerId: { code, semester, assignedAt } }
-  const SEMESTER_KEY = "currentSemesterM1";         // Aktuelles Semester (z.B. "WS2526")
-  const PLAYER_STATE_KEY = "assignedCodeM1";        // Cache am Spieler
-  const PLAYER_SEMESTER_KEY = "assignedSemesterM1"; // Semester des Cached Codes
+  const STATE_KEY = "assignedCodesM4";              // Map: { playerId: { code, semester, assignedAt } }
+  const SEMESTER_KEY = "currentSemesterM4";         // Aktuelles Semester (z.B. "WS2526")
+  const PLAYER_STATE_KEY = "assignedCodeM4";        // Cache am Spieler
+  const PLAYER_SEMESTER_KEY = "assignedSemesterM4"; // Semester des Cached Codes
 
   // Retry-Konfiguration für Race Conditions
   const MAX_RETRIES = 5;

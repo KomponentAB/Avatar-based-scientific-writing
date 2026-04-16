@@ -81,7 +81,7 @@ WA.onInit().then(async () => {
 
     // Event listener for changes in the current quest
     WA.player.state.onVariableChange('currentQuest').subscribe((newQuestId) => {
-        levelUp("notlog_2", 10);
+        levelUp("notlog2", 10);
         const newQuest = quests.find((q: { questId: string }) => q.questId === newQuestId);
         if (newQuest) {
             createQuestBanner(newQuest.questId);

@@ -147,7 +147,7 @@ WA.onInit().then(async () => {
                                         setTimeout(resolve, 4000)
                                     );
                                     WA.player.state.currentQuest = "quest27";
-                                    levelUp("notlog2", 42);
+                                    levelUp("notlog2", 32);
                                     WA.nav.goToRoom("./notlog-solved.tmj");
                                 } else {
                                     WA.chat.sendChatMessage(

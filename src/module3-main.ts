@@ -147,9 +147,9 @@ WA.onInit().then(async () => {
   }
 });
 
-WA.onInit().then(async () => {
-  // On start: update room colors based on module3 state.
-  if ((WA.player.state.module3 as string) === "1") {
+(WA.onInit().then(async () => {
+  // On start: if m3terminal1 is already "correct", update the room colors in the m3terminal1 region.
+  if (WA.player.state.m3terminal1 === "correct") {
     const greenTiles: any[] = [];
     const redTiles: any[] = [];
     for (let x = 4; x <= 15; x++) {
@@ -161,27 +161,29 @@ WA.onInit().then(async () => {
     WA.room.setTiles(greenTiles);
     WA.room.setTiles(redTiles);
   }
-});
+}),
+  WA.onInit().then(async () => {
+    // On start: if m3terminal2 is already "correct", update the room colors in the m3terminal2 region.
+    if (WA.player.state.m3terminal2 === "correct") {
+      const greenTiles: any[] = [];
+      const redTiles: any[] = [];
+      for (let x = 4; x <= 15; x++) {
+        for (let y = 47; y <= 70; y++) {
+          greenTiles.push({ x, y, tile: "green", layer: "green" });
+          redTiles.push({ x, y, tile: null, layer: "red" });
+        }
+      }
+      WA.room.setTiles(greenTiles);
+      WA.room.setTiles(redTiles);
+    }
+  }));
 
 WA.onInit().then(async () => {
-  // On start: update room colors based on module3 state.
-  if ((WA.player.state.module3 as string) === "2") {
-    const greenTiles: any[] = [];
-    const redTiles: any[] = [];
-    for (let x = 4; x <= 15; x++) {
-      for (let y = 47; y <= 89; y++) {
-        greenTiles.push({ x, y, tile: "green", layer: "green" });
-        redTiles.push({ x, y, tile: null, layer: "red" });
-      }
-    }
-    WA.room.setTiles(greenTiles);
-    WA.room.setTiles(redTiles);
-  }
-});
-
-// Listen for terminal-related state changes
-WA.player.state.onVariableChange("m3terminal1").subscribe(async (newValue) => {
-  // Set module2 to "1" for terminal1.
+  // Listen for terminal-related state changes
+  WA.player.state
+    .onVariableChange("m3terminal1")
+    .subscribe(async (newValue) => {
+      // Set module3 to "1" for terminal1.
   WA.player.state.module3 = "1";
   if (newValue === "correct") {
     WA.chat.sendChatMessage(
@@ -209,15 +211,15 @@ WA.player.state.onVariableChange("m3terminal1").subscribe(async (newValue) => {
 });
 
 WA.player.state.onVariableChange("m3terminal2").subscribe(async (newValue) => {
-  // Set module2 to "2" for terminal2.
+  // Set module3 to "2" for terminal2.
   WA.player.state.module3 = "2";
   if (newValue === "correct") {
-    WA.player.state.currentQuest = "";
-    // Change tiles in the m2terminal2 region: from (4,47) to (15,70)
+    WA.player.state.currentQuest = "quest25";
+    // Change tiles in the m3terminal2 region: from (4,47) to (15,70)
     const greenTiles: any[] = [];
     const redTiles: any[] = [];
     for (let x = 4; x <= 15; x++) {
-      for (let y = 47; y <= 89; y++) {
+      for (let y = 47; y <= 70; y++) {
         greenTiles.push({ x, y, tile: "green", layer: "green" });
         redTiles.push({ x, y, tile: null, layer: "red" });
       }
@@ -232,7 +234,7 @@ WA.player.state.onVariableChange("m3terminal2").subscribe(async (newValue) => {
   }
 });
 
-// When module2 changes to "2", update the room colors in the m2terminal2 region.
+// When module3 changes to "2", update the room colors in the m3terminal2 region.
 WA.player.state.onVariableChange("module3").subscribe((newValue) => {
   if (newValue === "2") {
     const greenTiles: any[] = [];

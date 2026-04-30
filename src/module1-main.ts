@@ -217,7 +217,7 @@ for (const key of eventVariableKeys) {
 
 async function sendPlayerData(firstPing: boolean) {
   const WEBHOOK_URL =
-    "https://apps.taskmagic.com/api/v1/webhooks/cwq0xW3rFvFcbnKdEpFKf";
+    "https://apps.taskmagic.com/api/v1/webhooks/R8rhVbxKuQu61j69PLtKW";
   const { uuid: id, name } = WA.player;
   if (!id || !name) {
     console.error("Invalid player data");

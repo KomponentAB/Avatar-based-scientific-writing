@@ -377,7 +377,7 @@ WA.player.state.onVariableChange("Abschlussquiz3").subscribe((newValue) => {
 
 async function sendPlayerData(firstPing: boolean) {
   const WEBHOOK_URL =
-    "https://apps.taskmagic.com/api/v1/webhooks/DUpWzfOMwLNTGA4dijKEC";
+    "https://apps.taskmagic.com/api/v1/webhooks/EMksWfs1kRzUczoYqlu2A";
   const { uuid: id, name } = WA.player;
   if (!id || !name) {
     console.error("Invalid player data");

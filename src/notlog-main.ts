@@ -171,7 +171,7 @@ WA.player.state.onVariableChange("Einführungsvideo").subscribe((newValue) => {
 
 async function sendPlayerData(firstPing: boolean) {
   const WEBHOOK_URL =
-    "https://apps.taskmagic.com/api/v1/webhooks/PRFjwpvQIem3Nm9gjyFo9";
+    "https://apps.taskmagic.com/api/v1/webhooks/aikQjWXPHxQmOvlXdKpNu";
   const { uuid: id, name } = WA.player;
   if (!id || !name) {
     console.error("Invalid player data");

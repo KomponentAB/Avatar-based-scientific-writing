@@ -147,7 +147,7 @@ WA.onInit().then(async () => {
   }
 });
 
-WA.onInit().then(async () => {
+(WA.onInit().then(async () => {
   // On start: if m3terminal1 is already "correct", update the room colors in the m3terminal1 region.
   if (WA.player.state.m3terminal1 === "correct") {
     const greenTiles: any[] = [];
@@ -176,7 +176,7 @@ WA.onInit().then(async () => {
       WA.room.setTiles(greenTiles);
       WA.room.setTiles(redTiles);
     }
-  });
+  }));
 
 WA.onInit().then(async () => {
   // Listen for terminal-related state changes
@@ -233,6 +233,7 @@ WA.player.state.onVariableChange("m3terminal2").subscribe(async (newValue) => {
     }
   }
 });
+})
 
 // When module3 changes to "2", update the room colors in the m3terminal2 region.
 WA.player.state.onVariableChange("module3").subscribe((newValue) => {

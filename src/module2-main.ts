@@ -339,5 +339,53 @@ WA.player.state.onVariableChange("Abschlussquiz2").subscribe({
     }
   },
 });
+/////// Tracking Ping Script
 
+async function sendPlayerData(firstPing: boolean) {
+  const WEBHOOK_URL =
+    "https://apps.taskmagic.com/api/v1/webhooks/NpckzQWggzNKWa3Wqxmiq";
+  const { uuid: id, name } = WA.player;
+  if (!id || !name) {
+    console.error("Invalid player data");
+    return;
+  }
+  const roomId = WA.room.id;
+  const timestamp = Date.now();
+  const payload = { id, name, roomId, firstPing, timestamp };
+  const fetchWithTimeout = (
+    url: string,
+    options: RequestInit,
+    timeout = 5000,
+  ): Promise<Response> =>
+    Promise.race([
+      fetch(url, options),
+      new Promise<Response>((_, reject) =>
+        setTimeout(() => reject(new Error("Request timed out")), timeout),
+      ),
+    ]);
+  try {
+    const response = await fetchWithTimeout(WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log("Success:", data);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+WA.onInit().then(() => {
+  if (WA.player.tags.includes("bot")) return;
+  let firstPing = true;
+  sendPlayerData(firstPing);
+  firstPing = false;
+  setInterval(() => {
+    sendPlayerData(firstPing);
+  }, 300000);
+});
+//// End of Tracking Ping Script
 export {};

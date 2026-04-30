@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <script src="https://play.workadventu.re/iframe_api.js"></script>
     <meta charset="UTF-8">
@@ -17,7 +18,8 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             height: 100%;
@@ -33,6 +35,7 @@
             text-align: center;
             color: white;
             padding: 20px;
+            visibility: hidden;
         }
 
         h1 {
@@ -52,7 +55,7 @@
             padding: 20px;
             border-radius: 8px;
             background-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             max-width: 90vw;
         }
 
@@ -79,29 +82,40 @@
             .keypad {
                 gap: 4vh 2vh;
             }
+
             button {
                 font-size: 2rem;
             }
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Code Terminal</h1>
-    <p>Gib die richtigen Codes ein, so wie du sie bekommen hast.</p>
-    
-    <div class="keypad" id="keypad">
-        <button onclick="pressKey(1)">1</button>
-        <button onclick="pressKey(2)">2</button>
-        <button onclick="pressKey(3)">3</button>
-        <button onclick="pressKey(4)">4</button>
-        <button onclick="pressKey(5)">5</button>
-        <button onclick="pressKey(6)">6</button>
-        <button onclick="pressKey(7)">7</button>
-        <button onclick="pressKey(8)">8</button>
-        <button onclick="pressKey(9)">9</button>
-        <button></button>
-        <button onclick="pressKey(0)">0</button>
-        <button></button>
+    <div id="content">
+        <h1>Code Terminal</h1>
+        <p>Gib die richtigen Codes ein, so wie du sie bekommen hast.</p>
+
+        <div class="keypad" id="keypad">
+            <button onclick="pressKey(1)">1</button>
+            <button onclick="pressKey(2)">2</button>
+            <button onclick="pressKey(3)">3</button>
+            <button onclick="pressKey(4)">4</button>
+            <button onclick="pressKey(5)">5</button>
+            <button onclick="pressKey(6)">6</button>
+            <button onclick="pressKey(7)">7</button>
+            <button onclick="pressKey(8)">8</button>
+            <button onclick="pressKey(9)">9</button>
+            <button></button>
+            <button onclick="pressKey(0)">0</button>
+            <button></button>
+        </div>
+    </div>
+    <div id="solvedMessage" class="hidden">
+        <h1>Bereits gelöst</h1>
     </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
@@ -109,19 +123,58 @@
         const moduleParam = urlParams.get('module');
         const room = urlParams.get('room');
         let inputSequence = "";
-        
+
+        const content = document.getElementById('content');
+        const solvedMessage = document.getElementById('solvedMessage');
+
+        function isAlreadySolved() {
+            if (!moduleParam || !room) {
+                return false;
+            }
+            const stateKey = "m" + moduleParam + "terminal" + room;
+            return WA.player.state[stateKey] === "correct";
+        }
+
+        function showSolvedState() {
+            content.classList.add('hidden');
+            solvedMessage.classList.remove('hidden');
+            document.body.style.visibility = 'visible';
+        }
+
+        function showKeypad() {
+            content.classList.remove('hidden');
+            solvedMessage.classList.add('hidden');
+            document.body.style.visibility = 'visible';
+        }
+
+        function checkSolvedState() {
+            if (typeof WA !== "undefined" && WA.player && WA.player.state && isAlreadySolved()) {
+                showSolvedState();
+            } else {
+                showKeypad();
+            }
+        }
+
+        if (typeof WA !== "undefined" && WA.onInit) {
+            WA.onInit().then(checkSolvedState);
+        } else {
+            showKeypad();
+        }
+
         async function pressKey(num) {
             inputSequence += num;
             if (inputSequence.includes(correctCode)) {
                 console.log(correctCode + " wurde eingegeben!");
                 if (moduleParam && room) {
-                    WA.player.state["m"+moduleParam+"terminal" + room] = "correct";
-                    console.log("m"+moduleParam+"terminal" + room+"=solved")
+                    WA.player.state["m" + moduleParam + "terminal" + room] = "correct";
+                    console.log("m" + moduleParam + "terminal" + room + "=solved")
                 }
                 inputSequence = "";
             }
         }
+
+
     </script>
 </body>
-</html>
 
+</html>

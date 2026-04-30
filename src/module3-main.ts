@@ -241,7 +241,7 @@ WA.player.state.onVariableChange("module3").subscribe((newValue) => {
     const greenTiles: any[] = [];
     const redTiles: any[] = [];
     for (let x = 4; x <= 15; x++) {
-      for (let y = 47; y <= 89; y++) {
+      for (let y = 71; y <= 89; y++) {
         greenTiles.push({ x, y, tile: "green", layer: "green" });
         redTiles.push({ x, y, tile: null, layer: "red" });
       }

@@ -265,13 +265,17 @@ WA.onInit().then(() => {
 
 //// Area Exit Webhook Script
 WA.onInit().then(() => {
-
   console.log("Setting up area exit tracking....");
+
   const AREA_EXIT_WEBHOOK_URL =
     "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
 
   const TRACKED_AREAS = ["testArea", "zirze_1"];
+  const COOLDOWN_MS = 10_000;
+
   const playerId = WA.player.uuid || "1234";
+
+  const lastExitByArea: Record<string, number> = {};
 
   const fetchWithTimeout = (
     url: string,
@@ -287,14 +291,26 @@ WA.onInit().then(() => {
 
   TRACKED_AREAS.forEach((areaName) => {
     console.log(`Setting up exit tracking for area: ${areaName}`);
+
     WA.room.area.onLeave(areaName).subscribe(() => {
+      const now = Date.now();
+      const lastExit = lastExitByArea[areaName] || 0;
+
+      if (now - lastExit < COOLDOWN_MS) {
+        console.log(`Cooldown active for area: ${areaName}`);
+        return;
+      }
+
+      lastExitByArea[areaName] = now;
+
       console.log(
         `Player ${playerId} left area: ${areaName}, sending webhook...`,
       );
+
       const payload = {
         id: playerId,
         h5pid: areaName,
-        timestamp: Date.now(),
+        timestamp: now,
         eventType: "page_closed",
       };
 

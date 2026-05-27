@@ -266,7 +266,7 @@ WA.onInit().then(() => {
 //// Area Exit Webhook Script
 WA.onInit().then(() => {
 
-  console.log("Setting up area exit tracking...");
+  console.log("Setting up area exit tracking....");
   const AREA_EXIT_WEBHOOK_URL =
     "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
 

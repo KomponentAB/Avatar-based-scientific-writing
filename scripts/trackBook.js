@@ -12,7 +12,7 @@ async function trackBookOpen(workbookName = "noNameBook") {
    {
    
 
-    const playerId = wa?.player?.uuid || "1234";
+    const playerId = WA.player.uuid || "unknown_player";
 
     const payload = {
       id: playerId,

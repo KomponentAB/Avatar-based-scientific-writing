@@ -7,8 +7,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tracking Test</title>
-
-    <script src="../scripts/workadventure-iframe-fixed.js"></script>
 </head>
 
 <body>
@@ -22,20 +20,6 @@
     <script>
         const workbookName = "testi-H5Pi";
 
-        WA.onInit().then(async () => {
-
-            const WEBHOOK_URL =
-                "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
-
-            const playerId = WA.player.uuid || "1234";
-
-            const payload = {
-                id: playerId,
-                h5pid: workbookName || "noNameBook",
-                timestamp: Date.now(),
-                eventType: "page_open"
-            };
-
             // Update HTML text
             document.getElementById("headline").innerText =
                 `Hallo ${playerId}`;
@@ -43,23 +27,8 @@
             document.getElementById("info").innerText =
                 `Beim Öffnen dieser Seite (${workbookName}) wird automatisch ein Webhook ausgelöst.`;
 
-            try {
-                const response = await fetch(WEBHOOK_URL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(payload)
-                });
 
-                console.log("Tracking sent:", payload);
-                console.log("Response status:", response.status);
-
-            } catch (error) {
-                console.error("Tracking failed:", error);
-            }
-
-        });
+    
     </script>
 
     <script>            trackBookOpen(workbookName); </script>  

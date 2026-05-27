@@ -1703,43 +1703,6 @@
                  "width":80,
                  "x":176,
                  "y":2608
-                }, 
-                {
-                 "height":80,
-                 "id":36,
-                 "name":"testArea",
-                 "properties":[
-                        {
-                         "name":"openWebsite",
-                         "type":"string",
-                         "value":".\/H5P\/2_1PlanungSelbstmanagementCopy.html"
-                        }, 
-                        {
-                         "name":"openWebsiteAllowApi",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsiteClosable",
-                         "type":"bool",
-                         "value":true
-                        }, 
-                        {
-                         "name":"openWebsiteTriggerMessage",
-                         "type":"string",
-                         "value":"leertaste f\u00fcr test"
-                        }, 
-                        {
-                         "name":"openWebsiteWidth",
-                         "type":"int",
-                         "value":50
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":80,
-                 "x":372,
-                 "y":2603
                 }],
          "opacity":1,
          "type":"objectgroup",

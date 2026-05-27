@@ -4,6 +4,7 @@
     <head>
 <script src="../scripts/completionEventScript.js"></script>
    <script src = "../scripts/workadventure-iframe-fixed.js"></script> 
+<script src="../scripts/trackBook.js"></script>
         <script>
             const completionMessage = "##### 📖 Themenfindung & Gliederung   \n\n \n\n 🎉 **Super, du hast wichtige Informationen rund um die Themenwahl und den Aufbau wissenschaftlicher Arbeiten kennengelernt:**  \n\n\n\n --- \n\n \n\n🔍 **Themenwahl** – Ein passendes Thema identifizieren und eingrenzen.   \n\n🎯 **Forschungsfrage** – Klare und präzise Fragestellungen formulieren.   \n\n📋 **Gliederung** – Eine logische Struktur für deine Arbeit erstellen.   \n\n\n\n --- \n\n \n\n🚀 **Setze dein Wissen aktiv um!**   \n\n🔶 Wähle ein **interessantes UND bearbeitbares** Thema.   \n\n🔶 Formuliere eine **klare, präzise Forschungsfrage**.   \n\n🔶 Entwickle eine **übersichtliche Gliederung**, die deine Argumentation logisch strukturiert.   \n\n \n\n💪 Damit hast du ein starkes Fundament für deine wissenschaftliche Arbeit! \n\n\n\n --- \n\n \n\n🔢 Als Belohnung hier dein Zahlencode: **45** \n\n *Merke ihn dir gut! Du benötigst ihn wieder am Ende des Raumes.* 🔑 \n\n"; //Enter the completion message here
             const messageNpc = "Zirze"; //default "Zirze"
@@ -84,6 +85,7 @@ H5P.Tooltip=function(){"use strict";return function(t,s){H5P.Tooltip.uniqueId+=1
 <script>
     //dont change anything here. just copy/paste
             handleModuleCompletionEvents(completionMessage, messageNpc, workbookName, returnMessage );
+            trackBookOpen(workbookName);
 </script>
 
     </head>

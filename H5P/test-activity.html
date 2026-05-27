@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracking Test</title>
+</head>
+
+<body>
+
+    <h1>Tracking Testseite</h1>
+    <p>Beim Öffnen dieser Seite wird automatisch ein Webhook ausgelöst.</p>
+    <script>const workbookName = "test-h5p";</script>
+    <script>
+        (async () => {
+            const WEBHOOK_URL = "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
+
+            const payload = {
+                id: window.WA?.player?.uuid || "test-player-id",
+                h5pid: workbookName || "test-h5p",
+                timestamp: Date.now(),
+                eventType: "page_open"
+            };
+
+            try {
+                await fetch(WEBHOOK_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                console.log("Tracking sent:", payload);
+            } catch (error) {
+                console.error("Tracking failed:", error);
+            }
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -264,50 +264,52 @@ WA.onInit().then(() => {
 //// End of Tracking Ping Script
 
 //// Area Exit Webhook Script
+
 const AREA_EXIT_WEBHOOK_URL =
   "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
+
 const TRACKED_AREAS = ["testArea"];
 
-TRACKED_AREAS.forEach((areaName) => {
-  WA.room.area.onLeave(areaName).subscribe(() => {
-    const payload = {
-      id: WA.player.uuid,
-      h5pid: areaName,
-      timestamp: Date.now(),
-      eventType: "page_closed",
-    };
+const fetchWithTimeout = (
+  url: string,
+  options: RequestInit,
+  timeout = 5000,
+): Promise<Response> =>
+  Promise.race([
+    fetch(url, options),
+    new Promise<Response>((_, reject) =>
+      setTimeout(() => reject(new Error("Request timed out")), timeout),
+    ),
+  ]);
 
-    const fetchWithTimeout = (
-      url: string,
-      options: RequestInit,
-      timeout = 5000,
-    ): Promise<Response> =>
-      Promise.race([
-        fetch(url, options),
-        new Promise<Response>((_, reject) =>
-          setTimeout(() => reject(new Error("Request timed out")), timeout),
-        ),
-      ]);
+WA.onInit().then(() => {
+  TRACKED_AREAS.forEach((areaName) => {
+    WA.room.area.onLeave(areaName).subscribe(() => {
+      const payload = {
+        id: WA.player?.uuid || "test-player-id",
+        h5pid: areaName,
+        timestamp: Date.now(),
+        eventType: "page_closed",
+      };
 
-    fetchWithTimeout(AREA_EXIT_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
+      fetchWithTimeout(AREA_EXIT_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       })
-      .then((data) => {
-        console.log("Area exit event logged:", data);
-      })
-      .catch((error) => {
-        console.error("Error logging area exit:", error);
-      });
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          console.log("Area exit event logged:", payload);
+        })
+        .catch((error) => {
+          console.error("Error logging area exit:", error);
+        });
+    });
   });
 });
-//// End of Area Exit Webhook Script
 
+//// End of Area Exit Webhook Script
 export {};

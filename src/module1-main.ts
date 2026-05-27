@@ -269,6 +269,7 @@ const AREA_EXIT_WEBHOOK_URL =
   "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
 
 const TRACKED_AREAS = ["testArea"];
+const playerId = WA.player.uuid || "1234";
 
 const fetchWithTimeout = (
   url: string,
@@ -284,9 +285,11 @@ const fetchWithTimeout = (
 
 WA.onInit().then(() => {
   TRACKED_AREAS.forEach((areaName) => {
+    console.log(`Setting up exit tracking for area: ${areaName}`);
     WA.room.area.onLeave(areaName).subscribe(() => {
+      console.log(`Player ${playerId} left area: ${areaName}, sending webhook...`);
       const payload = {
-        id: WA.player?.uuid || "test-player-id",
+        id: playerId,
         h5pid: areaName,
         timestamp: Date.now(),
         eventType: "page_closed",

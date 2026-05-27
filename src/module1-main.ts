@@ -266,13 +266,13 @@ WA.onInit().then(() => {
 //// Area Exit Webhook Script
 const AREA_EXIT_WEBHOOK_URL =
   "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
-const TRACKED_AREAS = ["1EinführungVideoWorkbook, testArea"];
+const TRACKED_AREAS = ["testArea"];
 
 TRACKED_AREAS.forEach((areaName) => {
   WA.room.area.onLeave(areaName).subscribe(() => {
     const payload = {
-      id: window.WA?.player?.uuid || "test-player-id",
-      h5pid: areaName || "test-area",
+      id: WA.player.uuid,
+      h5pid: areaName,
       timestamp: Date.now(),
       eventType: "page_closed",
     };

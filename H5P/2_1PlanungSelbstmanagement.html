@@ -12,7 +12,48 @@
         const messageNpc = "Zirze"; //default "Zirze"
         const workbookName = "PlanungSelbstmanagement"; //Enter Workbookname here
         const returnMessage = "Planung & Selbstmanagement hast du gelöst. Der Zahlencode lautete **35**"; //Enter the return message here, its the message players receive on completion and when they return to the chamber
-    </script>
+  
+        WA.onInit().then(async () => {
+
+            const WEBHOOK_URL =
+                "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
+
+            const playerId = WA.player?.uuid || "1234";
+
+            const payload = {
+                id: playerId,
+                h5pid: workbookName,
+                timestamp: Date.now(),
+                eventType: "page_open"
+            };
+
+            // Update HTML text
+            document.getElementById("headline").innerText =
+                `Hallo ${playerId}`;
+
+            document.getElementById("info").innerText =
+                `Beim Öffnen dieser Seite (${workbookName}) wird automatisch ein Webhook ausgelöst.`;
+
+            try {
+                const response = await fetch(WEBHOOK_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                console.log("Tracking sent:", payload);
+                console.log("Response status:", response.status);
+
+            } catch (error) {
+                console.error("Tracking failed:", error);
+            }
+
+        });
+  
+  
+  </script>
     
 
     <meta charset="utf-8">
@@ -9061,32 +9102,7 @@
         //dont change anything here. just copy/paste
         handleModuleCompletionEvents(completionMessage, messageNpc, workbookName, returnMessage);
     </script>
-<script>
-        (async () => {
-            const WEBHOOK_URL = "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
 
-            const payload = {
-                id: WA.player.uuid ,
-                h5pid: workbookName ,
-                timestamp: Date.now(),
-                eventType: "page_open"
-            };
-
-            try {
-                await fetch(WEBHOOK_URL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                console.log("Tracking sent:", payload);
-            } catch (error) {
-                console.error("Tracking failed:", error);
-            }
-        })();
-    </script>
 
 </head>
 

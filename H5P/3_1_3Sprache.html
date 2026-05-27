@@ -5,6 +5,7 @@
 
 <script src="../scripts/completionEventScript.js"></script>
    <script src = "../scripts/workadventure-iframe-fixed.js"></script> 
+<script src="../scripts/trackBook.js"></script>
         <script>
             const completionMessage = "##### ⚖️ Gendergerechte Sprache  \n\n \n\n**🎉 Gut gemacht, du hast diesen Bereich gemeistert!**  \n\n\n\n --- \n\n \n\n🌍 **Genderregeln verstehen** – Die Grundlagen der gendergerechten Sprache erlernen.   \n\n📝 **Gendergerechte Formulierungen** – Verschiedene Formulierungen korrekt anwenden.   \n\n\n\n --- \n\n \n\n🚀 **Setze dein Wissen jetzt beim Schreiben gezielt ein!** \n\n🔮 Nutze eine **inklusive Sprache**, die alle Menschen anspricht   \n\n🔮 Überarbeite deine Texte bewusst – **inklusive Formulierungen prüfen** \n\n \n\n💡 **So entwickelst du einen inklusiven Schreibstil!**  \n\n\n\n --- \n\n \n\n🔢 Als Belohnung hier dein Zahlencode: **97**  \n\n*Merke ihn dir gut! Du benötigst ihn wieder am Ende des Raumes.* 🔑 \n\n"; //Enter the completion message here
             const messageNpc = "Zirze"; //default "Zirze"
@@ -71,13 +72,11 @@ H5P.Video=function(h,p){function f(i,e,t={}){var r=this,n=(r.oldTime=t.previousS
       
 
 
-
-
 <script>
     //dont change anything here. just copy/paste
-                        handleModuleCompletionEvents(completionMessage, messageNpc, workbookName, returnMessage );
+            handleModuleCompletionEvents(completionMessage, messageNpc, workbookName, returnMessage );
+            trackBookOpen(workbookName);
 </script>
-
 
     </head>
     <body>

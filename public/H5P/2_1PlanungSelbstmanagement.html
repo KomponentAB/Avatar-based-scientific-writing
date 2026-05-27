@@ -13,7 +13,7 @@
         const workbookName = "PlanungSelbstmanagement"; //Enter Workbookname here
         const returnMessage = "Planung & Selbstmanagement hast du gelöst. Der Zahlencode lautete **35**"; //Enter the return message here, its the message players receive on completion and when they return to the chamber
   
-        WA.onInit().then(async () => {
+       
 
             const WEBHOOK_URL =
                 "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
@@ -26,13 +26,6 @@
                 timestamp: Date.now(),
                 eventType: "page_open"
             };
-
-            // Update HTML text
-            document.getElementById("headline").innerText =
-                `Hallo ${playerId}`;
-
-            document.getElementById("info").innerText =
-                `Beim Öffnen dieser Seite (${workbookName}) wird automatisch ein Webhook ausgelöst.`;
 
             try {
                 const response = await fetch(WEBHOOK_URL, {
@@ -50,7 +43,7 @@
                 console.error("Tracking failed:", error);
             }
 
-        });
+
   
   
   </script>

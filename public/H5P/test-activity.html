@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
-
+ 
 <head>
+   <script src = "../scripts/trackBook.js"></script>  
+       <script src = "../scripts/workadventure-iframe-fixed.js"></script> 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tracking Test</title>
@@ -18,7 +20,7 @@
     </p>
 
     <script>
-        const workbookName = "test-H5P";
+        const workbookName = "testi-H5Pi";
 
         WA.onInit().then(async () => {
 
@@ -29,7 +31,7 @@
 
             const payload = {
                 id: playerId,
-                h5pid: workbookName,
+                h5pid: workbookName || "noNameBook",
                 timestamp: Date.now(),
                 eventType: "page_open"
             };
@@ -59,6 +61,8 @@
 
         });
     </script>
+
+    <script>            trackBookOpen(workbookName); </script>  
 
 </body>
 

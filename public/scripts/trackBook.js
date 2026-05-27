@@ -1,7 +1,7 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
 (function () {
-  console.log("trackBook.js loaded");
+  console.log("trackBook.js 1.1.3 loaded");
 
   const BOOK_TRACKING_WEBHOOK_URL =
     "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";

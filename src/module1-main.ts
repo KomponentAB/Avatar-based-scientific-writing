@@ -264,30 +264,33 @@ WA.onInit().then(() => {
 //// End of Tracking Ping Script
 
 //// Area Exit Webhook Script
-
-const AREA_EXIT_WEBHOOK_URL =
-  "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
-
-const TRACKED_AREAS = ["testArea"];
-const playerId = WA.player.uuid || "1234";
-
-const fetchWithTimeout = (
-  url: string,
-  options: RequestInit,
-  timeout = 5000,
-): Promise<Response> =>
-  Promise.race([
-    fetch(url, options),
-    new Promise<Response>((_, reject) =>
-      setTimeout(() => reject(new Error("Request timed out")), timeout),
-    ),
-  ]);
-
 WA.onInit().then(() => {
+
+  console.log("Setting up area exit tracking...");
+  const AREA_EXIT_WEBHOOK_URL =
+    "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
+
+  const TRACKED_AREAS = ["testArea", "zirze_1"];
+  const playerId = WA.player.uuid || "1234";
+
+  const fetchWithTimeout = (
+    url: string,
+    options: RequestInit,
+    timeout = 5000,
+  ): Promise<Response> =>
+    Promise.race([
+      fetch(url, options),
+      new Promise<Response>((_, reject) =>
+        setTimeout(() => reject(new Error("Request timed out")), timeout),
+      ),
+    ]);
+
   TRACKED_AREAS.forEach((areaName) => {
     console.log(`Setting up exit tracking for area: ${areaName}`);
     WA.room.area.onLeave(areaName).subscribe(() => {
-      console.log(`Player ${playerId} left area: ${areaName}, sending webhook...`);
+      console.log(
+        `Player ${playerId} left area: ${areaName}, sending webhook...`,
+      );
       const payload = {
         id: playerId,
         h5pid: areaName,

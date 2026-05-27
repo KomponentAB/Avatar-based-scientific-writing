@@ -1712,7 +1712,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":".\/H5P\/test-activity.html"
+                         "value":".\/H5P\/2_1PlanungSelbstmanagementCopy.html"
                         }, 
                         {
                          "name":"openWebsiteAllowApi",

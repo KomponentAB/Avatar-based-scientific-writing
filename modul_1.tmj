@@ -1723,6 +1723,53 @@
                  "width":80,
                  "x":170,
                  "y":2609
+                }, 
+                {
+                 "height":80,
+                 "id":37,
+                 "name":"testArea2",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":".\/H5P\/testH5P.html"
+                        }, 
+                        {
+                         "name":"openWebsiteAllowApi",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"openWebsiteClosable",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"[SPACE] um das  digitale Tutorium zu \u00f6ffnen"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":50
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":80,
+                 "x":384,
+                 "y":2611
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1832,7 +1879,7 @@
          "y":0
         }],
  "nextlayerid":30,
- "nextobjectid":37,
+ "nextobjectid":38,
  "orientation":"orthogonal",
  "properties":[
         {

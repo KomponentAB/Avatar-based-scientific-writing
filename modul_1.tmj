@@ -1634,6 +1634,16 @@
                          "value":"Zitierende Zirze"
                         }, 
                         {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
                          "name":"triggerQuest",
                          "type":"string",
                          "value":""
@@ -1696,13 +1706,23 @@
                          "name":"openWebsiteWidth",
                          "type":"int",
                          "value":50
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",
                  "visible":true,
                  "width":80,
-                 "x":176,
-                 "y":2608
+                 "x":170,
+                 "y":2609
                 }],
          "opacity":1,
          "type":"objectgroup",

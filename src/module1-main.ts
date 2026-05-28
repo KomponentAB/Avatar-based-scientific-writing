@@ -3,6 +3,7 @@ import { checkPlayerMaterial, mySound, playRandomSound } from "./footstep";
 import { getChatAreas } from "./chatArea";
 import { levelUp, quests } from "./quests";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
+import { setupAreaTracking } from "./trackingArea";
 
 WA.onInit().then(async () => {
   try {
@@ -57,6 +58,14 @@ WA.onInit().then(async () => {
       });
     }
   });
+// Set up area tracking for entering and leaving specific areas
+
+
+WA.onInit().then(async () => {
+  await setupAreaTracking();
+});
+
+// end of area tracking
 
   // Event listener for player movement to play footstep sounds
   WA.player.onPlayerMove(async ({ x, y, moving }) => {

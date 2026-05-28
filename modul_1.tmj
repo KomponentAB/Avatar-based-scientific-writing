@@ -1695,7 +1695,7 @@
                         {
                          "name":"openWebsiteClosable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"openWebsiteTriggerMessage",

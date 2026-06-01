@@ -33,4 +33,4 @@ Vergiss deine **Wortschnipsel** nicht, diese sind sehr wichtig! ✂️💡
  
 
 Du bist nun bereit, mit **Modul 3** weiterzumachen, um mehr über das **wissenschaftliche Schreiben** zu erfahren. ✍️📖 `,"Zirze")}WA.player.state.module2==="2"&&WA.player.state.module3==="2"&&n()});WA.onInit().then(async()=>{if(WA.player.name.toLowerCase()==="bot"||WA.player.tags.includes("bot")){WA.player.setOutlineColor(147,51,234),await b();return}await y(),M(),k()});
-//# sourceMappingURL=src-hub-main-2ff0f5b5.js.map
+//# sourceMappingURL=src-hubMain-2ff0f5b5.js.map

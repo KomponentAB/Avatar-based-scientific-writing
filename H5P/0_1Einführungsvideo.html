@@ -6,7 +6,7 @@
 
 <script src="../scripts/completionEventScript.js"></script>
    <script src = "../scripts/workadventure-iframe-fixed.js"></script> 
-       
+       <script src = "../scripts/trackBook.js"></script>   
 
         <script>
             const completionMessage = "Du hattest also Erfolg. Dann bist du jetzt bereit das Kondensatorium zu betreten, merke dir folgenden Geheimcode: **1337**. Finde die geheime Tür und gebe den Code ein um fortzufahren."; //Enter the completion message here
@@ -91,6 +91,7 @@ H5P.DragNBarElement=function(s,o){function t(t,i,e){var n=this;o.call(this),this
 <script>
     //dont change anything here. just copy/paste
             handleModuleCompletionEvents(completionMessage, messageNpc, workbookName, returnMessage );
+            trackBookOpen(workbookName);
 </script>
 
 

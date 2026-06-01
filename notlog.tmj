@@ -5265,7 +5265,7 @@
                         {
                          "name":"script",
                          "type":"string",
-                         "value":"src\/main.ts"
+                         "value":"src\/notlogMain.ts"
                         }]
                 }, 
                 {

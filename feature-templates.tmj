@@ -2672,7 +2672,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/notlog-main.ts"
+         "value":"src\/notlogMain.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.11.2",

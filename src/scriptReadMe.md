@@ -52,14 +52,14 @@ komponentab-avatar-based-scientific-writing/
 │   ├── chatArea.ts
 │   ├── finalChallenge.ts
 │   ├── footstep.ts
-│   ├── hub-main.ts
+│   ├── hubMain.ts
 │   ├── huh.ts
 │   ├── main.ts
-│   ├── module1-main.ts
-│   ├── module2-main.ts
-│   ├── module3-main.ts
-│   ├── notlog-main.ts
-│   ├── notlog-solved.ts
+│   ├── m1Maints
+│   ├── m2Main.ts
+│   ├── m3Main.ts
+│   ├── notlogMain.ts
+│   ├── notlogSolvedMain.ts
 │   ├── quests.ts
 │   ├── scriptReadMe.md
 │   ├── worldTracking.ts
@@ -138,12 +138,12 @@ The project contains multiple map-specific TypeScript files.
 | File | Purpose |
 |---|---|
 | `src/main.ts` | General / shared map script |
-| `src/hub-main.ts` | Hub map logic |
-| `src/module1-main.ts` | Module 1 map logic |
-| `src/module2-main.ts` | Module 2 map logic |
-| `src/module3-main.ts` | Module 3 map logic |
-| `src/notlog-main.ts` | Notlog map logic |
-| `src/notlog-solved.ts` | Solved Notlog map logic |
+| `src/hubMain.ts` | Hub map logic |
+| `src/m1Main.ts` | Module 1 map logic |
+| `src/m2Main.ts` | Module 2 map logic |
+| `src/m3Main.ts` | Module 3 map logic |
+| `src/notlogMain.ts` | Notlog map logic |
+| `src/notlogSolvedMain.ts` | Solved Notlog map logic |
 
 These scripts are automatically included in the build through `vite.config.ts` using WorkAdventure map optimizer utilities.
 

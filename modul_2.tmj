@@ -1580,6 +1580,16 @@
                          "value":"Zitierende Zirze"
                         }, 
                         {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
                          "name":"triggerQuest",
                          "type":"string",
                          "value":"quest12"
@@ -1632,6 +1642,16 @@
                          "name":"npcName",
                          "type":"string",
                          "value":"Zitierende Zirze"
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }, 
                         {
                          "name":"triggerQuest",
@@ -1722,7 +1742,7 @@
                         {
                          "name":"openWebsiteClosable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"openWebsiteTriggerMessage",
@@ -1733,6 +1753,16 @@
                          "name":"openWebsiteWidth",
                          "type":"int",
                          "value":50
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1759,7 +1789,7 @@
                         {
                          "name":"openWebsiteClosable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"openWebsiteTriggerMessage",
@@ -1770,6 +1800,16 @@
                          "name":"openWebsiteWidth",
                          "type":"int",
                          "value":50
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1796,7 +1836,7 @@
                         {
                          "name":"openWebsiteClosable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"openWebsiteTriggerMessage",
@@ -1807,6 +1847,16 @@
                          "name":"openWebsiteWidth",
                          "type":"int",
                          "value":50
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1844,7 +1894,7 @@
                         {
                          "name":"openWebsiteClosable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"openWebsiteTriggerMessage",
@@ -1855,6 +1905,16 @@
                          "name":"openWebsiteWidth",
                          "type":"int",
                          "value":50
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",
@@ -1892,6 +1952,16 @@
                          "name":"openWebsiteWidth",
                          "type":"int",
                          "value":25
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",

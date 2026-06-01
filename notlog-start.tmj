@@ -3108,7 +3108,7 @@
                         {
                          "name":"openWebsiteClosable",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -3124,6 +3124,16 @@
                          "name":"openWebsiteWidth",
                          "type":"int",
                          "value":50
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":false
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3151,6 +3161,16 @@
                          "name":"npcName",
                          "type":"string",
                          "value":"Mumblecore"
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }, 
                         {
                          "name":"triggerQuest",
@@ -3185,6 +3205,16 @@
                          "value":"Prof. McDongle"
                         }, 
                         {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
                          "name":"triggerQuest",
                          "type":"string",
                          "value":"quest2"
@@ -3215,6 +3245,16 @@
                          "name":"npcName",
                          "type":"string",
                          "value":"Herr Grid "
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3242,6 +3282,16 @@
                          "name":"npcName",
                          "type":"string",
                          "value":"Marry Jane Progger"
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }],
                  "rotation":0,
                  "type":"area",
@@ -3269,6 +3319,16 @@
                          "name":"npcName",
                          "type":"string",
                          "value":"Prof. Sake"
+                        }, 
+                        {
+                         "name":"trackEnter",
+                         "type":"bool",
+                         "value":true
+                        }, 
+                        {
+                         "name":"trackLeave",
+                         "type":"bool",
+                         "value":true
                         }, 
                         {
                          "name":"triggerQuest",

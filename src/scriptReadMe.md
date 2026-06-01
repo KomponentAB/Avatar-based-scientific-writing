@@ -374,7 +374,7 @@ Most tracking payloads follow this structure:
 | `name` | `WA.player.name` |
 | `roomId` | Full `WA.room.id` |
 | `roomKey` | Simplified room key extracted from `roomId` |
-| `timestamp` | `Date.now()` in milliseconds |
+| `timestamp` | `Date.now()` in milliseconds | !!THE TIME AND DATE IS UTC+0 -> -2:00hrs from Berlin Summertime
 | `eventType` | Type of event being tracked |
 | `object` | Optional target object, NPC, area, workbook, or player list |
 | `sheetsId` | Optional Google Sheets sheet ID for ping routing |

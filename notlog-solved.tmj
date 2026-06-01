@@ -4949,11 +4949,6 @@
                          "name":"mapName",
                          "type":"string",
                          "value":"Notlog"
-                        }, 
-                        {
-                         "name":"script",
-                         "type":"string",
-                         "value":"src\/notlogSolvedMain.ts"
                         }]
                 }, 
                 {

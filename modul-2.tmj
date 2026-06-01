@@ -2323,7 +2323,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/module2-main.ts"
+         "value":"src\/m2Main.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.11.0",

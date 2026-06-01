@@ -1,38 +1,68 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
 (function () {
-  // Dynamically load the external script
-  const script = document.createElement("script");
+  const BOOK_TRACKING_WEBHOOK_URL =
+    "https://apps.taskmagic.com/api/v1/webhooks/8yUsd0Tbmg8XaZ8KOk4eg";
 
-  script.onload = () => {
-    console.log("External iframe API loaded.");
-   
-  };
-  document.head.appendChild(script);
+  function getRoomKey(roomId) {
+    return roomId.split("/").filter(Boolean).pop() || "unknown_room";
+  }
+
+  async function trackBookSolved(workbookName) {
+    try {
+      await WA.onInit();
+
+      const roomId = WA.room.id || "unknown_room";
+      const roomKey = getRoomKey(roomId);
+      const playerId = WA.player.uuid || "unknown_player";
+
+      const payload = {
+        id: playerId,
+        roomId,
+        roomKey,
+        object: workbookName || "noNameBook",
+        timestamp: Date.now(),
+        eventType: "solved",
+      };
+
+      const response = await fetch(BOOK_TRACKING_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      console.log("Solved tracking sent:", payload);
+      console.log("Response status:", response.status);
+      console.log("Response ok:", response.ok);
+    } catch (error) {
+      console.error("Solved tracking failed:", error);
+    }
+  }
 
   function handleModuleCompletionEvents(
     completionMessage,
     messageNpc,
     workbookName,
-    returnMessage
+    returnMessage,
   ) {
     console.log("🚩 Completion Event Script loaded");
-    WA.onInit().then(() => {
-      console.log(workbookName+" geladen", messageNpc);
-      const checkState = () => {
-          try {
-              const stateValue = WA.player.state[workbookName];
-                  if (stateValue === "solved") {
-                      WA.chat.sendChatMessage(returnMessage, messageNpc);
-                  }
-              } 
-          catch (error) {
-          }
-      };
-      checkState();
-  });
 
-    // Validate H5P and externalDispatcher
+    WA.onInit().then(() => {
+      console.log(workbookName + " geladen", messageNpc);
+
+      try {
+        const stateValue = WA.player.state[workbookName];
+
+        if (stateValue === "solved") {
+          WA.chat.sendChatMessage(returnMessage, messageNpc);
+        }
+      } catch (error) {
+        console.warn("Could not check workbook state:", error);
+      }
+    });
+
     if (!window.H5P || !H5P.externalDispatcher) {
       console.error("H5P or externalDispatcher is not available.");
       return;
@@ -40,33 +70,40 @@
 
     let instance;
 
-    // Wait for H5P to initialize and grab the instance
     H5P.externalDispatcher.on("initialized", () => {
       instance = H5P.instances && H5P.instances[0] ? H5P.instances[0] : null;
     });
 
-    // Listen to xAPI events
-    H5P.externalDispatcher.on("xAPI", (event) => {
+    H5P.externalDispatcher.on("xAPI", () => {
       if (!instance) return;
 
-      // Trigger only on full completion
       if (instance.getScore() === instance.getMaxScore()) {
         console.log(
-          `🚩 COMPLETED: ${instance.getScore()} / ${instance.getMaxScore()} for ${workbookName}`
+          `🚩 COMPLETED: ${instance.getScore()} / ${instance.getMaxScore()} for ${workbookName}`,
         );
+
         if (WA.player.state[workbookName] !== "solved") {
           WA.player.state[workbookName] = "solved";
-          console.log( workbookName + "🚩 State variable has been changed to solved: " );
+
+          trackBookSolved(workbookName);
+
+          console.log(
+            workbookName + " 🚩 State variable has been changed to solved",
+          );
+
           WA.chat.sendChatMessage(completionMessage, messageNpc);
+
           setTimeout(async () => {
             const cowebsites = await WA.nav.getCoWebSites();
+
             for (const cowebsite of cowebsites) {
               cowebsite.close();
             }
-          }, 120000); // Close all co-websites after 2 minutes
+          }, 120000);
         }
       }
     });
   }
+
   window.handleModuleCompletionEvents = handleModuleCompletionEvents;
 })();

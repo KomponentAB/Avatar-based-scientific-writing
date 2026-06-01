@@ -1621,7 +1621,7 @@
                         {
                          "name":"chatText",
                          "type":"string",
-                         "value":"Zirze noch nicht konfiguriert"
+                         "value":"Test eins zwo"
                         }, 
                         {
                          "name":"isNpc",
@@ -1652,8 +1652,8 @@
                  "type":"area",
                  "visible":true,
                  "width":93.0835,
-                 "x":360,
-                 "y":2520
+                 "x":355.586653167406,
+                 "y":2512.41657238978
                 }, 
                 {
                  "height":32.1818,

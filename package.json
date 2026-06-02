@@ -18,7 +18,7 @@
     "express": "^5.2.1",
     "typescript": "^5.9.2",
     "vite": "^7.3.0",
-    "wa-map-optimizer-vite": "^1.2.4",
+    "wa-map-optimizer-vite": "^1.2.5",
     "vite-plugin-node": "^7.0.0"
   },
   "dependencies": {

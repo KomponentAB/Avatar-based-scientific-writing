@@ -15,12 +15,13 @@ Das Projekt gehört zur **Johannes Gutenberg-Universität Mainz**.
 ## Projektverantwortung
 
 **Verantwortlich:**  
-Prof. Dr. Sebastian Wurster  
+Dr. Sebastian Wurster  
 Johannes Gutenberg-Universität Mainz
 
 **Projektmitarbeit:**  
 Till Weckmüller  
 Madlen Glass
+Kilian Schmelmer
 
 ---
 
